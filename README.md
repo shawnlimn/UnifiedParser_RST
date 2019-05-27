@@ -18,8 +18,8 @@ To put something about the RST
 
 ### Data format
 #### Example
-* Sentence: (Input sentences should be tokenizaed sentences.)
-Although the [report,] which has [released] before the stock market [opened,] didn't trigger the 190.58 point drop in the Dow Jones Industrial [Average,] analysts [said] it did play a role in the market's [decline.]  ('[]' denotes the EDU boundary tokens.)
+* `Sentence`: (Input sentences should be tokenizaed sentences.) \<br>
+Although the [report,] which has [released] before the stock market [opened,] didn't trigger the 190.58 point drop in the Dow Jones Industrial [Average,] analysts [said] it did play a role in the market's [decline.]  ('[]' denotes the EDU boundary tokens.) \<br>
 
 * Gold Discourse Tree structure: (The output of the parser also holds for the format.)
 (1:Satellite=Contrast:4,5:Nucleus=span:6) (1:Nucleus=Same-Unit:3,4:Nucleus=Same-Unite:4) (5:Satellite=Attribution:5,6:Nucleus=span:6) (1:Satellite=span:1,2:Nucleus=Elaboration:3) (2:Nucleus=span:2,3:Satellite=Temporal:3)
