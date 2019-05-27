@@ -9,8 +9,6 @@ import numpy as np
 import random
 import argparse
 from model import ParsingNet
-from Training import Train
-import os
 from allennlp.modules.elmo import Elmo, batch_to_ids
 
 
@@ -36,7 +34,7 @@ def parse_args():
     parser.add_argument('--lr', type=float, default=0.001, help='Initial lr')
     parser.add_argument('--lr_decay_epoch', type=int, default=10, help='Lr decay epoch')
     parser.add_argument('--weight_decay', type=float, default=0.0005, help='Weight decay rate')
-    parser.add_argument('--highorder', type=str, default='False', help='Whether to incorperate highoreder information')
+    parser.add_argument('--highorder', type=str, default='True', help='Whether to incorperate highoreder information')
     # TO BE ADDED
     parser.add_argument('--datapath', type=str, default=r'/4TB/lin/Parsing/HIGHORDER/ParsingData/', help='Data path')
     parser.add_argument('--savepath', type=str, default=r'/4TB/lin/Parsing/HIGHORDER/test/Savings', help='Model save path')

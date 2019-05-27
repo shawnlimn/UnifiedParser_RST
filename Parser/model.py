@@ -138,7 +138,7 @@ class ParsingNet(nn.Module):
                     # To incorperate sibling information
                     cur_DecoderInputs_S = cur_EncoderOutputs[cur_SiblingIndex]
                     for n in range(len(cur_SiblingIndex)):
-                        if cur_SiblingIndex[n] == 0:
+                        if cur_SiblingIndex[n] == 99:
                             cur_DecoderInputs_S[n] = 0
 
                     # Original input
