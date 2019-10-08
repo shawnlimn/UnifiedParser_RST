@@ -21,7 +21,7 @@ We train and evaluate the model with the standard RST Discourse Treebank (RST-DT
 
 ### Data format
 #### Example
-* `Sentence`: (Input sentences should be tokenizaed first. '[]' denotes the EDU boundary tokens.) <br>
+* `Sentence`: (Input sentences should be tokenizaed first. '[ ]' denotes the EDU boundary tokens.) <br>
     * Although the [report,] which has [released] before the stock market [opened,] didn't trigger the 190.58 point drop in the Dow Jones Industrial [Average,] analysts [said] it did play a role in the market's [decline.]  <br>
 
 * `EDU_Breaks`: (The indexes of the EDU boundary words, including the last word of the sentence.) <br>
@@ -46,27 +46,32 @@ We train and evaluate the model with the standard RST Discourse Treebank (RST-DT
 * Parser: <br>
 ```
 cd Parser/
-python train.py
+python main.py
 ```
 You can also control any other arguments. Please refer to `main.py`. By default, the parser will use the same parameters as described in the paper.
 
 * Segmenter: <br>
-To be released..
-
+```
+cd Segmenter
+python train.py
+```
+* You will need all the data files as described in `Data format` to run Discourse Parser, while only `Sentence` and `EDU_Breaks` are needed for Discourse Segmenter.
 
 ## Citation
 Please cite our paper if you found the resources in this repository useful.
 ```
-@inproceedings{Xiang19,
-	Address     = {Florence, Italy},
-	Author      = {Xiang Lin and Shafiq Joty and Prathyusha Jwalapuram and M Saiful Bari},
-	Booktitle   = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
-	Numpages    = {9},
-	Publisher   = {ACL},
-	Series      = {ACL '19},
-        pages       = {xx--xx},
-	Title       = {{A Unified Linear-Time Framework for Sentence-Level Discourse Parsing}},
-	Year        = {2019},
-	url         = {https://arxiv.org/abs/1905.05682}
+@inproceedings{lin-etal-2019-unified,
+    title = "A Unified Linear-Time Framework for Sentence-Level Discourse Parsing",
+    author = "Lin, Xiang  and
+      Joty, Shafiq  and
+      Jwalapuram, Prathyusha  and
+      Bari, M Saiful",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    doi = "10.18653/v1/P19-1410",
+    pages = "4190--4200",
 }	
 ```
