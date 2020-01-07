@@ -38,8 +38,8 @@ We train and evaluate the model with the standard RST Discourse Treebank (RST-DT
     
 * For training, you will need to prepare `decoder_input_index` as the decoder input and corresponding `parent_index`, `sibling_index` as the partial tree information.
    * decoder_input_index: [0, 0, 0, 1, 4] (to take the first EDU as the representation of text span to be parsed.) or [5, 3, 2, 2, 5] (to take the last EDU as the representation of text span to be parsed.) 
-   * parent_index: [0, 5, 4, 3, 6]
-   * sibling_index: [99, 99, 99, 0, 4] ('99' denotes empty siblings.)
+   * parent_index: [0, 5, 3, 2, 5] (first '0' would be ignore automatically)
+   * sibling_index: [99, 99, 99, 0, 3] ('99' denotes empty siblings.)
 
 
 ## How To Run
